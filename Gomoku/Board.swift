@@ -5,19 +5,46 @@ enum Player {
     case Empty
 }
 
+class SpaceOccupied : ErrorType {
+    
+}
+
+class BadLocation : ErrorType {
+    
+}
+
 class Board {
-    var stones = 0
+    let WIDTH=19
+    let HEIGHT=19
+    
     var placedStones = [Int: Player]()
     
     func stonesPlaced() -> Int {
-        return stones
+        return placedStones.count
     }
     
-    func add(row: Int, column: Int, player: Player) {
-        stones += 1
+    func place(row: Int, column: Int, player: Player) throws {
+        let loc = try makeLocation(row, column: column)
+        if (placedStones[loc] != nil) {
+            throw SpaceOccupied()
+        }
+        placedStones[loc] = player
     }
     
-    func get(row: Int, column: Int) -> Player {
-        return .White
+    func makeLocation(row: Int, column: Int) throws -> Int {
+        if row < 0 || row >= WIDTH || column < 0 || column >= HEIGHT {
+            throw BadLocation()
+        }
+        return column * WIDTH + row
+    }
+    
+    func get(row: Int, column: Int) throws -> Player {
+        let loc = try makeLocation(row, column: column)
+        if let stone = placedStones[loc] {
+            return stone
+        }
+        else {
+            return Player.Empty
+        }
     }
 }
