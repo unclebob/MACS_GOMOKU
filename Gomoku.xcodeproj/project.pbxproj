@@ -12,8 +12,9 @@
 		F15214D11CBC1536004A30D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214CF1CBC1536004A30D9 /* Main.storyboard */; };
 		F15214D31CBC1536004A30D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15214D21CBC1536004A30D9 /* Assets.xcassets */; };
 		F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */; };
-		F15214E11CBC1536004A30D9 /* GomokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214E01CBC1536004A30D9 /* GomokuTests.swift */; };
 		F15214EC1CBC1536004A30D9 /* GomokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */; };
+		F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FB1CBC158C004A30D9 /* BoardTest.swift */; };
+		F15214FE1CBC1594004A30D9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		F15214D51CBC1536004A30D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F15214D71CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15214DC1CBC1536004A30D9 /* GomokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F15214E01CBC1536004A30D9 /* GomokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuTests.swift; sourceTree = "<group>"; };
 		F15214E21CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuUITests.swift; sourceTree = "<group>"; };
 		F15214ED1CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15214FB1CBC158C004A30D9 /* BoardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
+		F15214FD1CBC1594004A30D9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F15214CA1CBC1536004A30D9 /* Gomoku */ = {
 			isa = PBXGroup;
 			children = (
+				F15214FD1CBC1594004A30D9 /* Board.swift */,
 				F15214CB1CBC1536004A30D9 /* AppDelegate.swift */,
 				F15214CD1CBC1536004A30D9 /* ViewController.swift */,
 				F15214CF1CBC1536004A30D9 /* Main.storyboard */,
@@ -110,7 +113,7 @@
 		F15214DF1CBC1536004A30D9 /* GomokuTests */ = {
 			isa = PBXGroup;
 			children = (
-				F15214E01CBC1536004A30D9 /* GomokuTests.swift */,
+				F15214FB1CBC158C004A30D9 /* BoardTest.swift */,
 				F15214E21CBC1536004A30D9 /* Info.plist */,
 			);
 			path = GomokuTests;
@@ -258,6 +261,7 @@
 			files = (
 				F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */,
 				F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */,
+				F15214FE1CBC1594004A30D9 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F15214E11CBC1536004A30D9 /* GomokuTests.swift in Sources */,
+				F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +427,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
 			};
 			name = Debug;
@@ -435,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
