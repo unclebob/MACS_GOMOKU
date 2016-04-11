@@ -12,7 +12,6 @@
 		F15214D11CBC1536004A30D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214CF1CBC1536004A30D9 /* Main.storyboard */; };
 		F15214D31CBC1536004A30D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15214D21CBC1536004A30D9 /* Assets.xcassets */; };
 		F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */; };
-		F15214EC1CBC1536004A30D9 /* GomokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */; };
 		F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FB1CBC158C004A30D9 /* BoardTest.swift */; };
 		F15214FE1CBC1594004A30D9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* Board.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		F15214DC1CBC1536004A30D9 /* GomokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15214E21CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuUITests.swift; sourceTree = "<group>"; };
 		F15214ED1CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15214FB1CBC158C004A30D9 /* BoardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
 		F15214FD1CBC1594004A30D9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		F15214EA1CBC1536004A30D9 /* GomokuUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */,
 				F15214ED1CBC1536004A30D9 /* Info.plist */,
 			);
 			path = GomokuUITests;
@@ -277,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F15214EC1CBC1536004A30D9 /* GomokuUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
