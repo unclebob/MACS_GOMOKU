@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214CB1CBC1536004A30D9 /* AppDelegate.swift */; };
+		F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214CD1CBC1536004A30D9 /* ViewController.swift */; };
+		F15214D11CBC1536004A30D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214CF1CBC1536004A30D9 /* Main.storyboard */; };
+		F15214D31CBC1536004A30D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15214D21CBC1536004A30D9 /* Assets.xcassets */; };
+		F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */; };
+		F15214E11CBC1536004A30D9 /* GomokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214E01CBC1536004A30D9 /* GomokuTests.swift */; };
+		F15214EC1CBC1536004A30D9 /* GomokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F15214DD1CBC1536004A30D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15214C01CBC1536004A30D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15214C71CBC1536004A30D9;
+			remoteInfo = Gomoku;
+		};
+		F15214E81CBC1536004A30D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15214C01CBC1536004A30D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15214C71CBC1536004A30D9;
+			remoteInfo = Gomoku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F15214C81CBC1536004A30D9 /* Gomoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15214CB1CBC1536004A30D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F15214CD1CBC1536004A30D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F15214D01CBC1536004A30D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F15214D21CBC1536004A30D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F15214D51CBC1536004A30D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F15214D71CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15214DC1CBC1536004A30D9 /* GomokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15214E01CBC1536004A30D9 /* GomokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuTests.swift; sourceTree = "<group>"; };
+		F15214E21CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuUITests.swift; sourceTree = "<group>"; };
+		F15214ED1CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F15214C51CBC1536004A30D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214D91CBC1536004A30D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214E41CBC1536004A30D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F15214BF1CBC1536004A30D9 = {
+			isa = PBXGroup;
+			children = (
+				F15214CA1CBC1536004A30D9 /* Gomoku */,
+				F15214DF1CBC1536004A30D9 /* GomokuTests */,
+				F15214EA1CBC1536004A30D9 /* GomokuUITests */,
+				F15214C91CBC1536004A30D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F15214C91CBC1536004A30D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F15214C81CBC1536004A30D9 /* Gomoku.app */,
+				F15214DC1CBC1536004A30D9 /* GomokuTests.xctest */,
+				F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F15214CA1CBC1536004A30D9 /* Gomoku */ = {
+			isa = PBXGroup;
+			children = (
+				F15214CB1CBC1536004A30D9 /* AppDelegate.swift */,
+				F15214CD1CBC1536004A30D9 /* ViewController.swift */,
+				F15214CF1CBC1536004A30D9 /* Main.storyboard */,
+				F15214D21CBC1536004A30D9 /* Assets.xcassets */,
+				F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */,
+				F15214D71CBC1536004A30D9 /* Info.plist */,
+			);
+			path = Gomoku;
+			sourceTree = "<group>";
+		};
+		F15214DF1CBC1536004A30D9 /* GomokuTests */ = {
+			isa = PBXGroup;
+			children = (
+				F15214E01CBC1536004A30D9 /* GomokuTests.swift */,
+				F15214E21CBC1536004A30D9 /* Info.plist */,
+			);
+			path = GomokuTests;
+			sourceTree = "<group>";
+		};
+		F15214EA1CBC1536004A30D9 /* GomokuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F15214EB1CBC1536004A30D9 /* GomokuUITests.swift */,
+				F15214ED1CBC1536004A30D9 /* Info.plist */,
+			);
+			path = GomokuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F15214C71CBC1536004A30D9 /* Gomoku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15214F01CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "Gomoku" */;
+			buildPhases = (
+				F15214C41CBC1536004A30D9 /* Sources */,
+				F15214C51CBC1536004A30D9 /* Frameworks */,
+				F15214C61CBC1536004A30D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gomoku;
+			productName = Gomoku;
+			productReference = F15214C81CBC1536004A30D9 /* Gomoku.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F15214DB1CBC1536004A30D9 /* GomokuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15214F31CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "GomokuTests" */;
+			buildPhases = (
+				F15214D81CBC1536004A30D9 /* Sources */,
+				F15214D91CBC1536004A30D9 /* Frameworks */,
+				F15214DA1CBC1536004A30D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15214DE1CBC1536004A30D9 /* PBXTargetDependency */,
+			);
+			name = GomokuTests;
+			productName = GomokuTests;
+			productReference = F15214DC1CBC1536004A30D9 /* GomokuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F15214E61CBC1536004A30D9 /* GomokuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15214F61CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "GomokuUITests" */;
+			buildPhases = (
+				F15214E31CBC1536004A30D9 /* Sources */,
+				F15214E41CBC1536004A30D9 /* Frameworks */,
+				F15214E51CBC1536004A30D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15214E91CBC1536004A30D9 /* PBXTargetDependency */,
+			);
+			name = GomokuUITests;
+			productName = GomokuUITests;
+			productReference = F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F15214C01CBC1536004A30D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Cleancoders;
+				TargetAttributes = {
+					F15214C71CBC1536004A30D9 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F15214DB1CBC1536004A30D9 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F15214C71CBC1536004A30D9;
+					};
+					F15214E61CBC1536004A30D9 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F15214C71CBC1536004A30D9;
+					};
+				};
+			};
+			buildConfigurationList = F15214C31CBC1536004A30D9 /* Build configuration list for PBXProject "Gomoku" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F15214BF1CBC1536004A30D9;
+			productRefGroup = F15214C91CBC1536004A30D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F15214C71CBC1536004A30D9 /* Gomoku */,
+				F15214DB1CBC1536004A30D9 /* GomokuTests */,
+				F15214E61CBC1536004A30D9 /* GomokuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F15214C61CBC1536004A30D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */,
+				F15214D31CBC1536004A30D9 /* Assets.xcassets in Resources */,
+				F15214D11CBC1536004A30D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214DA1CBC1536004A30D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214E51CBC1536004A30D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F15214C41CBC1536004A30D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */,
+				F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214D81CBC1536004A30D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15214E11CBC1536004A30D9 /* GomokuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15214E31CBC1536004A30D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15214EC1CBC1536004A30D9 /* GomokuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F15214DE1CBC1536004A30D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15214C71CBC1536004A30D9 /* Gomoku */;
+			targetProxy = F15214DD1CBC1536004A30D9 /* PBXContainerItemProxy */;
+		};
+		F15214E91CBC1536004A30D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15214C71CBC1536004A30D9 /* Gomoku */;
+			targetProxy = F15214E81CBC1536004A30D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F15214CF1CBC1536004A30D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15214D01CBC1536004A30D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15214D51CBC1536004A30D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F15214EE1CBC1536004A30D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F15214EF1CBC1536004A30D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F15214F11CBC1536004A30D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gomoku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.Gomoku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F15214F21CBC1536004A30D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gomoku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.Gomoku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F15214F41CBC1536004A30D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GomokuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
+			};
+			name = Debug;
+		};
+		F15214F51CBC1536004A30D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GomokuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
+			};
+			name = Release;
+		};
+		F15214F71CBC1536004A30D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GomokuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Gomoku;
+			};
+			name = Debug;
+		};
+		F15214F81CBC1536004A30D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GomokuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Gomoku;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F15214C31CBC1536004A30D9 /* Build configuration list for PBXProject "Gomoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15214EE1CBC1536004A30D9 /* Debug */,
+				F15214EF1CBC1536004A30D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15214F01CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "Gomoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15214F11CBC1536004A30D9 /* Debug */,
+				F15214F21CBC1536004A30D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F15214F31CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "GomokuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15214F41CBC1536004A30D9 /* Debug */,
+				F15214F51CBC1536004A30D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F15214F61CBC1536004A30D9 /* Build configuration list for PBXNativeTarget "GomokuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15214F71CBC1536004A30D9 /* Debug */,
+				F15214F81CBC1536004A30D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F15214C01CBC1536004A30D9 /* Project object */;
+}
