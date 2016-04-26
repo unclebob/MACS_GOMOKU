@@ -20,28 +20,32 @@ class BoardTest: XCTestCase {
         try board.place(Intersection(1,1), player: Player.White)
         XCTAssertEqual(1, board.stonesPlaced())
         
-        var placedStone = try board.get(1, column:1)
+        var placedStone = try board.get(Intersection(1,1))
         XCTAssertEqual(Player.White, placedStone)
         
         try board.place(Intersection(board.WIDTH-1,board.HEIGHT-1), player: Player.Black)
         
         XCTAssertEqual(2, board.stonesPlaced())
         
-        placedStone = try board.get(board.WIDTH-1, column:board.HEIGHT-1)
+        placedStone = try board.get(Intersection(board.WIDTH-1,board.HEIGHT-1))
         XCTAssertEqual(Player.Black, placedStone)
     }
     
     func testKnowsAboutEmptyIntersections() throws {
-        XCTAssertEqual(Player.Empty, try board.get(0,column: 1))
-        try board.place(Intersection(0,1), player: Player.White)
-        XCTAssertEqual(Player.White, try board.get(0,column: 1))
+        let emptyIntersection = Intersection(0,1)
+        XCTAssertEqual(Player.Empty, try board.get(emptyIntersection))
+        try board.place(emptyIntersection, player: Player.White)
+        XCTAssertEqual(Player.White, try board.get(emptyIntersection))
     }
     
     func testCannotAddToOccupiedIntersection() throws {
         try board.place(Intersection(0,0), player: Player.White)
-        let badIntersection = Intersection(0,0)
-        XCTAssertThrowsError(try board.place(badIntersection, player: Player.Black))
+        
+        XCTAssertThrowsError(try board.place(0, column: 0, player: Player.Black))
+        XCTAssertThrowsError(try board.place(0, column: 0, player: Player.Black))
         XCTAssertThrowsError(try board.place(0, column: 0, player: Player.White))
+        // todo try to use do-catch to avoid stupid XCTAssertThrowsError problem.
+        // "against stupidity, the gods themselves, contend in vain"
     }
     
     func testCannotPlaceStonesOutsideBounds() throws {
