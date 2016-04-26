@@ -13,6 +13,8 @@ class BadLocation : ErrorType {
     
 }
 
+typealias Intersection = (row: Int, column: Int)
+
 class Board {
     let WIDTH=19
     let HEIGHT=19
@@ -21,6 +23,10 @@ class Board {
     
     func stonesPlaced() -> Int {
         return placedStones.count
+    }
+    
+    func place(intersection: Intersection, player: Player) throws {
+        try place(intersection.row, column: intersection.column, player: player)
     }
     
     func place(row: Int, column: Int, player: Player) throws {
