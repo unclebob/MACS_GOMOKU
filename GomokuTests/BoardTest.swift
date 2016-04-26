@@ -44,8 +44,7 @@ class BoardTest: XCTestCase {
         XCTAssertThrowsError(try board.place(0, column: 0, player: Player.Black))
         XCTAssertThrowsError(try board.place(0, column: 0, player: Player.Black))
         XCTAssertThrowsError(try board.place(0, column: 0, player: Player.White))
-        // todo try to use do-catch to avoid stupid XCTAssertThrowsError problem.
-        // "against stupidity, the gods themselves, contend in vain"
+        // "against stupidity, the gods themselves, contend in vain" -- Schiller.
     }
     
     func testCannotPlaceStonesOutsideBounds() throws {
