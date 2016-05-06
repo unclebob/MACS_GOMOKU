@@ -16,6 +16,7 @@
 		F15214FE1CBC1594004A30D9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* Board.swift */; };
 		F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */; };
 		F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
+		F1D360641CDD2E1600B5663D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D360631CDD2E1600B5663D /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F15214FD1CBC1594004A30D9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRulesTest.swift; sourceTree = "<group>"; };
 		F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRules.swift; sourceTree = "<group>"; };
+		F1D360631CDD2E1600B5663D /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */,
 				F15214D71CBC1536004A30D9 /* Info.plist */,
 				F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */,
+				F1D360631CDD2E1600B5663D /* GridView.swift */,
 			);
 			path = Gomoku;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */,
 				F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */,
 				F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */,
+				F1D360641CDD2E1600B5663D /* GridView.swift in Sources */,
 				F15214FE1CBC1594004A30D9 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
