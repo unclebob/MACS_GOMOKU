@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
         var board = Board()
+        try! board.place(Intersection(10,10), player: Player.White)
+        try! board.place(Intersection(11,11), player: Player.Black)
         let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), board: board)
         self.view.addSubview(gridView)
     }
