@@ -2,11 +2,19 @@ import UIKit
 
 class GridView: UIView {
     let board: Board
-    
+    let boardSize: CGFloat
+    let cellCount: Int
+    let cellSize: CGFloat
+    var tapper: UITapGestureRecognizer!
     
     init(frame: CGRect, board: Board) {
         self.board = board
+        self.boardSize = min(frame.size.width, frame.size.height)
+        self.cellCount = board.WIDTH + 1
+        self.cellSize = boardSize / CGFloat(cellCount)
         super.init(frame: frame)
+        self.tapper = UITapGestureRecognizer(target: self, action: #selector(GridView.tapped(_:)))
+        self.addGestureRecognizer(self.tapper)
         self.backgroundColor = UIColor(colorLiteralRed: 255/255.0, green: 226/255.0, blue: 154/255.0, alpha: 1)
     }
     
@@ -14,49 +22,53 @@ class GridView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func drawRect(rect: CGRect) {
-        let outerBoxSize = min(rect.size.width, rect.size.height)
-        let cellCount = board.WIDTH + 1
-        let cellSize = outerBoxSize / CGFloat(cellCount)
+    func tapped(tapper: UITapGestureRecognizer) {
+        let locationOfTap = tapper.locationOfTouch(0, inView: self)
         
-        let context = UIGraphicsGetCurrentContext()
+        let tappedColumn = Int((locationOfTap.x - cellSize) / cellSize + 0.5)
+        let tappedRow = Int((locationOfTap.y - cellSize) / cellSize + 0.5)
+        try! board.place(Intersection(tappedColumn, tappedRow), player: Player.White)
+        self.setNeedsDisplay()
+    }
+    
+    override func drawRect(rect: CGRect) {
         let path = UIBezierPath()
         
         for i in 1..<cellCount {
             let xPos = CGFloat(i) * cellSize
             path.moveToPoint(CGPointMake(xPos, cellSize))
-            path.addLineToPoint(CGPointMake(xPos, outerBoxSize - cellSize))
+            path.addLineToPoint(CGPointMake(xPos, boardSize - cellSize))
         }
         for i in 1..<cellCount {
             let yPos = CGFloat(i) * cellSize
             path.moveToPoint(CGPointMake(cellSize, yPos))
-            path.addLineToPoint(CGPointMake(outerBoxSize - cellSize, yPos))
+            path.addLineToPoint(CGPointMake(boardSize - cellSize, yPos))
         }
+        path.lineWidth = 1
+        path.stroke()
         
         for col in 0..<board.WIDTH {
             for row in 0..<board.HEIGHT {
                 let stone = try! board.get(Intersection(col, row))
                 if stone != Player.Empty {
+                    let stonePath = UIBezierPath()
                     if stone == Player.White {
-                        UIColor.whiteColor().set()
+                        UIColor.whiteColor().setFill()
                     }
                     else {
-                        UIColor.blackColor().set()
+                        UIColor.blackColor().setFill()
                     }
                     
                     let center = CGPoint(x: CGFloat(col + 1) * cellSize, y: CGFloat(row + 1) * cellSize)
-                    let radius = cellSize / 3.0
+                    let stoneRadius = cellSize / 2.5
                     
-                    path.moveToPoint(center)
-                    path.addArcWithCenter(center, radius: radius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    stonePath.moveToPoint(center)
+                    stonePath.addArcWithCenter(center, radius: stoneRadius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    stonePath.fill()
                 }
             }
         }
         
-        path.lineWidth = 1
-        path.stroke()
-        
-        CGContextAddPath(context, path.CGPath)
-        UIGraphicsEndImageContext()
+
     }
 }
