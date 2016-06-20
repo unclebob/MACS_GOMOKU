@@ -7,10 +7,14 @@ class Game {
     
     func takeTurn(col: Int, _ row: Int) {
         board.place(col, row, whoseTurn())
-        player = player == Player.White ? Player.Black : Player.White
+        player = other(player)
     }
     
     func whoseTurn() -> Player {
         return player
+    }
+    
+    func other(player: Player) -> Player {
+        return player == Player.White ? Player.Black : Player.White
     }
 }
