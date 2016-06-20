@@ -14,4 +14,6 @@ class GomokuRules {
         
         return playerPiecesInARow > 4
     }
+    
+
 }

@@ -26,7 +26,10 @@ class ViewController: UIViewController {
         
         let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), game: game)
         self.view.addSubview(gridView)
-        gridView.tapResponder = () -> (col)
+        
+        gridView.tapResponder = { (col, row) in
+            self.respondToTap(col, row: row)
+        }
         
         let labelWidth: CGFloat = 100.0
         statusLabel = UILabel(frame: CGRectMake((view.frame.width - labelWidth) / 2.0, 100,labelWidth, 25))
@@ -37,6 +40,12 @@ class ViewController: UIViewController {
         statusLabel.textAlignment = NSTextAlignment.Center
     }
 
+    
+    func respondToTap(col: Int, row: Int) {
+        game.takeTurn(col, row)
+        statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
