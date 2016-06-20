@@ -32,10 +32,10 @@ class Board {
     }
     func makeLocation(column: Int, _ row: Int) -> (Int, BoardError?)  {
         var error : BoardError?
-        if row < 0 || row >= WIDTH || column < 0 || column >= HEIGHT {
+        if row < 0 || row >= HEIGHT || column < 0 || column >= WIDTH {
             error = .BadLocation
         }
-        return (column * WIDTH + row,error)
+        return (column * WIDTH + row, error)
     }
     
     func get(column: Int, _ row: Int) -> (Player?, BoardError?) {
