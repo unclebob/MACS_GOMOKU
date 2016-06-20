@@ -14,6 +14,8 @@
 		F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */; };
 		F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FB1CBC158C004A30D9 /* BoardTest.swift */; };
 		F15214FE1CBC1594004A30D9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* Board.swift */; };
+		F17B0B741D1851AF00AC4FBD /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* Board.swift */; };
+		F17B0B751D1851AF00AC4FBD /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
 		F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */; };
 		F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
 		F1D360641CDD2E1600B5663D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D360631CDD2E1600B5663D /* GridView.swift */; };
@@ -205,7 +207,6 @@
 					};
 					F15214DB1CBC1536004A30D9 = {
 						CreatedOnToolsVersion = 7.3;
-						TestTargetID = F15214C71CBC1536004A30D9;
 					};
 					F15214E61CBC1536004A30D9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -277,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17B0B741D1851AF00AC4FBD /* Board.swift in Sources */,
+				F17B0B751D1851AF00AC4FBD /* GomokuRules.swift in Sources */,
 				F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */,
 				F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */,
 			);
@@ -434,27 +437,23 @@
 		F15214F41CBC1536004A30D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
 			};
 			name = Debug;
 		};
 		F15214F51CBC1536004A30D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
 			};
 			name = Release;
 		};
