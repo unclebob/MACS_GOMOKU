@@ -37,7 +37,7 @@ class Board {
         placedStones[loc] = player
     }
     
-    func makeLocation(intersection: Intersection) throws -> Int {
+    func makeLocation(intersection: Intersection) throws -> (Int, ErrorType?) {
         return try makeLocation(intersection.row, column: intersection.column)
     }
     
