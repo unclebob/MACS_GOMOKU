@@ -7,4 +7,9 @@ class GamePresenterTest: XCTestCase {
         XCTAssertEqual("White's Turn", presenter.getPlayerStatus(Player.White))
         XCTAssertEqual("Black's Turn", presenter.getPlayerStatus(Player.Black))
     }
+    
+    func testFormatOfPlayerWinStatus() {
+        let presenter = GamePresenter()
+        XCTAssertEqual("White Wins!", presenter.getWinStatus(Player.White))
+    }
 }

@@ -1,8 +1,10 @@
 class Game {
     let board: Board
+    let rules: GomokuRules
     var player = Player.White
     init(board: Board, rules: GomokuRules) {
         self.board = board
+        self.rules = rules
     }
     
     func takeTurn(col: Int, _ row: Int) {
@@ -20,5 +22,9 @@ class Game {
     
     func getBoard() -> Board {
         return board
+    }
+    
+    func getRules() -> GomokuRules {
+        return rules
     }
 }

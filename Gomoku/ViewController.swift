@@ -43,7 +43,12 @@ class ViewController: UIViewController {
     
     func respondToTap(col: Int, row: Int) {
         game.takeTurn(col, row)
-        statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
+        if game.getRules().isWin(board, game.whoseTurn()) {
+            statusLabel.text = presenter.getWinStatus(game.whoseTurn())
+        }
+        else {
+            statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
+        }
     }
     
     override func didReceiveMemoryWarning() {
