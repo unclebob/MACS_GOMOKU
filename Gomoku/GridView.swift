@@ -27,7 +27,7 @@ class GridView: UIView {
         
         let tappedColumn = Int((locationOfTap.x - cellSize) / cellSize + 0.5)
         let tappedRow = Int((locationOfTap.y - cellSize) / cellSize + 0.5)
-        board.place(Intersection(tappedColumn, tappedRow), player: Player.White)
+        board.place(tappedColumn, tappedRow, Player.White)
         self.setNeedsDisplay()
     }
     
@@ -49,7 +49,7 @@ class GridView: UIView {
         
         for col in 0..<board.WIDTH {
             for row in 0..<board.HEIGHT {
-                let (stone, _) = board.get(Intersection(col, row))
+                let (stone, _) = board.get(col, row)
                 if stone != Player.Empty {
                     let stonePath = UIBezierPath()
                     if stone == Player.White {
