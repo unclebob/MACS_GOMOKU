@@ -24,13 +24,15 @@ class ViewController: UIViewController {
         game = Game(board: board, rules: rules)
         presenter = GamePresenter()
         
-        let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), board: board)
+        let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), game: game)
         self.view.addSubview(gridView)
+        gridView.tapResponder = () -> (col)
         
         let labelWidth: CGFloat = 100.0
         statusLabel = UILabel(frame: CGRectMake((view.frame.width - labelWidth) / 2.0, 100,labelWidth, 25))
         self.view.addSubview(statusLabel)
-        statusLabel.text = presenter.getPlayerStatus(game.whoseTurn());
+        
+        statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
         statusLabel.textColor = UIColor.whiteColor()
         statusLabel.textAlignment = NSTextAlignment.Center
     }

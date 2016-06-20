@@ -4,7 +4,7 @@ import XCTest
 class GamePresenterTest: XCTestCase {
     func testFormatOfPlayerStatus() {
         let presenter = GamePresenter()
-        let playerStatus = presenter.getPlayerStatus(Player.White)
-        XCTAssertEqual("White's Turn", playerStatus)
+        XCTAssertEqual("White's Turn", presenter.getPlayerStatus(Player.White))
+        XCTAssertEqual("Black's Turn", presenter.getPlayerStatus(Player.Black))
     }
 }

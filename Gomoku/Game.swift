@@ -17,4 +17,8 @@ class Game {
     func other(player: Player) -> Player {
         return player == Player.White ? Player.Black : Player.White
     }
+    
+    func getBoard() -> Board {
+        return board
+    }
 }

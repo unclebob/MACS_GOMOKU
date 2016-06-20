@@ -1,14 +1,19 @@
 import UIKit
 
+
+typealias TapResponder = (col: Int, row: Int) -> ()
 class GridView: UIView {
+    let game: Game
     let board: Board
     let boardSize: CGFloat
     let cellCount: Int
     let cellSize: CGFloat
     var tapper: UITapGestureRecognizer!
+    var tapResponder: TapResponder?
     
-    init(frame: CGRect, board: Board) {
-        self.board = board
+    init(frame: CGRect, game: Game) {
+        self.game = game
+        self.board = game.getBoard()
         self.boardSize = min(frame.size.width, frame.size.height)
         self.cellCount = board.WIDTH + 1
         self.cellSize = boardSize / CGFloat(cellCount)
@@ -16,6 +21,10 @@ class GridView: UIView {
         self.tapper = UITapGestureRecognizer(target: self, action: #selector(GridView.tapped(_:)))
         self.addGestureRecognizer(self.tapper)
         self.backgroundColor = UIColor(colorLiteralRed: 255/255.0, green: 226/255.0, blue: 154/255.0, alpha: 1)
+    }
+    
+    func setResponder(responder: TapResponder) {
+        self.tapResponder = responder
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +36,7 @@ class GridView: UIView {
         
         let tappedColumn = Int((locationOfTap.x - cellSize) / cellSize + 0.5)
         let tappedRow = Int((locationOfTap.y - cellSize) / cellSize + 0.5)
-        board.place(tappedColumn, tappedRow, Player.White)
+        self.tapResponder?(col: tappedColumn, row: tappedRow)
         self.setNeedsDisplay()
     }
     
