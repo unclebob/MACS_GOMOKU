@@ -9,8 +9,6 @@ enum BoardError {
     case SpaceOccupied, BadLocation
 }
 
-typealias Intersection = (row: Int, column: Int)
-
 class Board {
     let WIDTH=19
     let HEIGHT=19
@@ -21,8 +19,8 @@ class Board {
         return placedStones.count
     }
 
-    func place(row: Int, _ column: Int, _ player: Player) -> BoardError? {
-        let (loc, error) = makeLocation(row, column)
+    func place(column: Int, _ row: Int, _ player: Player) -> BoardError? {
+        let (loc, error) = makeLocation(column, row)
         if (error != nil) {
             return error
         }
@@ -32,7 +30,7 @@ class Board {
         placedStones[loc] = player
         return nil
     }
-    func makeLocation(row: Int, _ column: Int) -> (Int, BoardError?)  {
+    func makeLocation(column: Int, _ row: Int) -> (Int, BoardError?)  {
         var error : BoardError?
         if row < 0 || row >= WIDTH || column < 0 || column >= HEIGHT {
             error = .BadLocation
@@ -40,8 +38,8 @@ class Board {
         return (column * WIDTH + row,error)
     }
     
-    func get(row: Int, _ column: Int) -> (Player?, BoardError?) {
-        let (loc, error) = makeLocation(row,column)
+    func get(column: Int, _ row: Int) -> (Player?, BoardError?) {
+        let (loc, error) = makeLocation(column,row)
         if (error != nil) {
             return (nil, error)
         }
