@@ -1,10 +1,15 @@
+protocol BoardFactory {
+    func makeBoard() -> Board
+}
+
 class Game {
     let board: Board
     let rules: GomokuRules
     var player = Player.White
+    static var boardFactory : BoardFactory!
 
     init() {
-        self.board = BoardFactory.makeBoard()
+        self.board = Game.boardFactory.makeBoard()
         self.rules = GomokuRules()
     }
     

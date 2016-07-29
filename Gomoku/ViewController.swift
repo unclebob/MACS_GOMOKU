@@ -1,17 +1,7 @@
-//
-//  ViewController.swift
-//  Gomoku
-//
-//  Created by Robert C Martin on 4/11/16.
-//  Copyright © 2016 Cleancoders. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     var statusLabel: UILabel!
-    var board: BoardState!
-    var rules: GomokuRules!
     var game: Game!
     var presenter: GamePresenter!
     
@@ -20,10 +10,9 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.blueColor()
         
         game = Game()
-        board = game.getBoard()
         presenter = GamePresenter()
         
-        let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), game: game)
+        let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), board: game.getBoard())
         self.view.addSubview(gridView)
         
         gridView.tapResponder = { (col, row) in
@@ -42,19 +31,12 @@ class ViewController: UIViewController {
     
     func respondToTap(col: Int, row: Int) {
         game.takeTurn(col, row)
-        if game.getRules().isWin(board, game.whoseTurn()) {
+        if game.getRules().isWin(game.getBoard(), game.whoseTurn()) {
             statusLabel.text = presenter.getWinStatus(game.whoseTurn())
         }
         else {
             statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

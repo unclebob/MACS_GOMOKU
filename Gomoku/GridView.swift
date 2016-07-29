@@ -3,7 +3,6 @@ import UIKit
 
 typealias TapResponder = (col: Int, row: Int) -> ()
 class GridView: UIView {
-    let game: Game
     let board: BoardState
     let boardSize: CGFloat
     let cellCount: Int
@@ -11,9 +10,8 @@ class GridView: UIView {
     var tapper: UITapGestureRecognizer!
     var tapResponder: TapResponder?
     
-    init(frame: CGRect, game: Game) {
-        self.game = game
-        self.board = game.getBoard()
+    init(frame: CGRect, board: BoardState) {
+        self.board = board
         self.boardSize = min(frame.size.width, frame.size.height)
         self.cellCount = board.getWidth() + 1
         self.cellSize = boardSize / CGFloat(cellCount)

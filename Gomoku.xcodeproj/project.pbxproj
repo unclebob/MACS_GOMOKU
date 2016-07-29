@@ -26,6 +26,8 @@
 		F17F98911D4BCFE400C72628 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F988F1D4BCFE400C72628 /* BoardState.swift */; };
 		F17F98931D4BD02000C72628 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98921D4BD02000C72628 /* Board.swift */; };
 		F17F98941D4BD02000C72628 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98921D4BD02000C72628 /* Board.swift */; };
+		F17F98961D4BDE8500C72628 /* BoardSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98951D4BDE8500C72628 /* BoardSymbols.swift */; };
+		F17F98971D4BDE8500C72628 /* BoardSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98951D4BDE8500C72628 /* BoardSymbols.swift */; };
 		F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */; };
 		F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
 		F1D360641CDD2E1600B5663D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D360631CDD2E1600B5663D /* GridView.swift */; };
@@ -68,6 +70,7 @@
 		F17B0B7E1D188AD900AC4FBD /* GamePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePresenterTest.swift; sourceTree = "<group>"; };
 		F17F988F1D4BCFE400C72628 /* BoardState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
 		F17F98921D4BD02000C72628 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		F17F98951D4BDE8500C72628 /* BoardSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardSymbols.swift; sourceTree = "<group>"; };
 		F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRulesTest.swift; sourceTree = "<group>"; };
 		F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRules.swift; sourceTree = "<group>"; };
 		F1D360631CDD2E1600B5663D /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 				F17B0B7B1D18899000AC4FBD /* GamePresenter.swift */,
 				F17F988F1D4BCFE400C72628 /* BoardState.swift */,
 				F17F98921D4BD02000C72628 /* Board.swift */,
+				F17F98951D4BDE8500C72628 /* BoardSymbols.swift */,
 			);
 			path = Gomoku;
 			sourceTree = "<group>";
@@ -296,6 +300,7 @@
 				F17B0B7C1D18899000AC4FBD /* GamePresenter.swift in Sources */,
 				F1D360641CDD2E1600B5663D /* GridView.swift in Sources */,
 				F15214FE1CBC1594004A30D9 /* BoardData.swift in Sources */,
+				F17F98961D4BDE8500C72628 /* BoardSymbols.swift in Sources */,
 				F17F98931D4BD02000C72628 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +317,7 @@
 				F17B0B771D18817600AC4FBD /* GameTest.swift in Sources */,
 				F17B0B7F1D188AD900AC4FBD /* GamePresenterTest.swift in Sources */,
 				F17B0B7D1D18899000AC4FBD /* GamePresenter.swift in Sources */,
+				F17F98971D4BDE8500C72628 /* BoardSymbols.swift in Sources */,
 				F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */,
 				F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */,
 			);

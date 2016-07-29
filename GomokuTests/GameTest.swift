@@ -3,6 +3,11 @@ import XCTest
 @testable import Gomoku
 
 class GameTest: XCTestCase {
+    override func setUp() {
+        Game.boardFactory = BoardFactoryImpl()
+        super.setUp()
+    }
+    
     func testWhiteStartsNewGame() {
         let game = Game()
         XCTAssertEqual(Player.White, game.whoseTurn())

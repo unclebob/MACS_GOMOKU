@@ -1,23 +1,5 @@
-
-enum Player {
-    case White
-    case Black
-    case Empty
-}
-
-enum BoardError {
-    case SpaceOccupied, BadLocation
-}
-
-protocol Board {
-    func place(column: Int, _ row: Int, _ player: Player) -> BoardError?
-    func get(column: Int, _ row: Int) -> (Player?, BoardError?)
-    func getWidth() -> Int
-    func getHeight() -> Int
-}
-
-class BoardFactory {
-    static func makeBoard() -> Board {
+class BoardFactoryImpl : BoardFactory {
+    func makeBoard() -> Board {
         return BoardData()
     }
 }
