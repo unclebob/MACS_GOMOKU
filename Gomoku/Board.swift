@@ -9,11 +9,31 @@ enum BoardError {
     case SpaceOccupied, BadLocation
 }
 
-class Board {
-    let WIDTH=19
-    let HEIGHT=19
+protocol Board {
+    func place(column: Int, _ row: Int, _ player: Player) -> BoardError?
+    func get(column: Int, _ row: Int) -> (Player?, BoardError?)
+    func getWidth() -> Int
+    func getHeight() -> Int
+}
+
+protocol BoardState {
+    func get(column: Int, _ row: Int) -> (Player?, BoardError?)
+    func getWidth() -> Int
+    func getHeight() -> Int
+}
+
+private class BoardData: Board, BoardState {
+    private let WIDTH=19
+    private let HEIGHT=19
     
     var placedStones = [Int: Player]()
+    
+    func getWidth() -> Int {
+        return WIDTH
+    }
+    func getHeight() -> Int {
+        return HEIGHT
+    }
     
     func stonesPlaced() -> Int {
         return placedStones.count

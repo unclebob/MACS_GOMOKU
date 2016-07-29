@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var statusLabel: UILabel!
-    var board: Board!
+    var board: BoardData!
     var rules: GomokuRules!
     var game: Game!
     var presenter: GamePresenter!
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
         
-        board = Board()
+        board = BoardData()
         rules = GomokuRules()
         game = Game(board: board, rules: rules)
         presenter = GamePresenter()

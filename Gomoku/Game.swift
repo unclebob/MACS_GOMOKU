@@ -1,8 +1,8 @@
 class Game {
-    let board: Board
+    let board: BoardData
     let rules: GomokuRules
     var player = Player.White
-    init(board: Board, rules: GomokuRules) {
+    init(board: BoardData, rules: GomokuRules) {
         self.board = board
         self.rules = rules
     }
@@ -20,7 +20,7 @@ class Game {
         return player == Player.White ? Player.Black : Player.White
     }
     
-    func getBoard() -> Board {
+    func getBoard() -> BoardData {
         return board
     }
     

@@ -4,7 +4,7 @@ import UIKit
 typealias TapResponder = (col: Int, row: Int) -> ()
 class GridView: UIView {
     let game: Game
-    let board: Board
+    let board: BoardData
     let boardSize: CGFloat
     let cellCount: Int
     let cellSize: CGFloat
@@ -15,7 +15,7 @@ class GridView: UIView {
         self.game = game
         self.board = game.getBoard()
         self.boardSize = min(frame.size.width, frame.size.height)
-        self.cellCount = board.WIDTH + 1
+        self.cellCount = board.getWidth() + 1
         self.cellSize = boardSize / CGFloat(cellCount)
         super.init(frame: frame)
         self.tapper = UITapGestureRecognizer(target: self, action: #selector(GridView.tapped(_:)))
@@ -56,8 +56,8 @@ class GridView: UIView {
         path.lineWidth = 1
         path.stroke()
         
-        for col in 0..<board.WIDTH {
-            for row in 0..<board.HEIGHT {
+        for col in 0..<board.getWidth() {
+            for row in 0..<board.getHeight() {
                 let (stone, _) = board.get(col, row)
                 if stone != Player.Empty {
                     let stonePath = UIBezierPath()

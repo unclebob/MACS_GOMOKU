@@ -2,11 +2,11 @@ import XCTest
 @testable import Gomoku
 
 class GomokuRulesTest: XCTestCase {
-    var board : Board!
+    var board : BoardData!
     var rules : GomokuRules!
     
     override func setUp() {
-        board = Board()
+        board = BoardData()
         rules = GomokuRules()
         super.setUp()
     }
@@ -53,8 +53,8 @@ class GomokuRulesTest: XCTestCase {
     }
     
     func testFiveConsecutiveInAnyRow_isAWin() {
-        for row in 0..<board.HEIGHT {
-            board = Board()
+        for row in 0..<board.getHeight() {
+            board = BoardData()
             for col in 0..<5 {
                 board.place(col,row, Player.Black)
             }
