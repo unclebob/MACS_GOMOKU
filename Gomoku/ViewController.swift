@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var statusLabel: UILabel!
-    var board: BoardData!
+    var board: BoardState!
     var rules: GomokuRules!
     var game: Game!
     var presenter: GamePresenter!
@@ -19,9 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
         
-        board = BoardData()
-        rules = GomokuRules()
-        game = Game(board: board, rules: rules)
+        game = Game()
+        board = game.getBoard()
         presenter = GamePresenter()
         
         let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), game: game)

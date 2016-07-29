@@ -4,25 +4,21 @@ import XCTest
 
 class GameTest: XCTestCase {
     func testWhiteStartsNewGame() {
-        let board = BoardData()
-        let rules = GomokuRules()
-        let game = Game(board: board, rules: rules)
+        let game = Game()
         XCTAssertEqual(Player.White, game.whoseTurn())
     }
     
     func testAfterATurn_isOtherPlayersTurn() {
-        let board = BoardData()
-        let rules = GomokuRules()
-        let game = Game(board: board, rules: rules)
+        let game = Game()
         
         game.takeTurn(0,0)
         
-        XCTAssertEqual(Player.White, board.get(0,0).0)
+        XCTAssertEqual(Player.White, game.getBoard().get(0,0).0)
         XCTAssertEqual(Player.Black, game.whoseTurn())
         
         game.takeTurn(1,0)
         
-        XCTAssertEqual(Player.Black, board.get(1,0).0)
+        XCTAssertEqual(Player.Black, game.getBoard().get(1,0).0)
         XCTAssertEqual(Player.White, game.whoseTurn())
     }
     

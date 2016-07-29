@@ -4,7 +4,7 @@ import UIKit
 typealias TapResponder = (col: Int, row: Int) -> ()
 class GridView: UIView {
     let game: Game
-    let board: BoardData
+    let board: BoardState
     let boardSize: CGFloat
     let cellCount: Int
     let cellSize: CGFloat

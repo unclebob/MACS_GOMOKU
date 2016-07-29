@@ -1,10 +1,11 @@
 class Game {
-    let board: BoardData
+    let board: Board
     let rules: GomokuRules
     var player = Player.White
-    init(board: BoardData, rules: GomokuRules) {
-        self.board = board
-        self.rules = rules
+
+    init() {
+        self.board = BoardFactory.makeBoard()
+        self.rules = GomokuRules()
     }
     
     func takeTurn(col: Int, _ row: Int) {
@@ -20,8 +21,8 @@ class Game {
         return player == Player.White ? Player.Black : Player.White
     }
     
-    func getBoard() -> BoardData {
-        return board
+    func getBoard() -> BoardState {
+        return board as! BoardState
     }
     
     func getRules() -> GomokuRules {
