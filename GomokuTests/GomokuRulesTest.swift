@@ -2,14 +2,14 @@ import XCTest
 @testable import Gomoku
 
 class GomokuRulesTest: XCTestCase {
-    var board : Board!
+    var board : protocol<Board, BoardState>!
     var rules : GomokuRules!
     var boardState : BoardState!
     
     override func setUp() {
         Game.boardFactory = BoardFactoryImpl()
         board = Game.boardFactory.makeBoard()
-        boardState = board as! BoardState
+        boardState = board
         rules = GomokuRules()
         super.setUp()
     }
@@ -58,7 +58,7 @@ class GomokuRulesTest: XCTestCase {
     func testFiveConsecutiveInAnyRow_isAWin() {
         for row in 0..<board.getHeight() {
             board = Game.boardFactory.makeBoard()
-            boardState = board as! BoardState
+            boardState = board
             for col in 0..<5 {
                 board.place(col,row, Player.Black)
             }

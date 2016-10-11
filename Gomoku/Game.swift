@@ -1,9 +1,9 @@
 protocol BoardFactory {
-    func makeBoard() -> Board
+    func makeBoard() -> protocol<Board, BoardState>
 }
 
 class Game {
-    let board: Board
+    let board: protocol<Board, BoardState>
     let rules: GomokuRules
     var player = Player.White
     static var boardFactory : BoardFactory!
@@ -27,7 +27,7 @@ class Game {
     }
     
     func getBoard() -> BoardState {
-        return board as! BoardState
+        return board
     }
     
     func getRules() -> GomokuRules {
