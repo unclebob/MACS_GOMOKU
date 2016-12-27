@@ -5,11 +5,11 @@ import XCTest
 
 class BoardTest: XCTestCase {
     var board: Board!
-    var boardData: BoardData!
+    var boardData: GameData!
     
     override func setUp() {
         super.setUp()
-        boardData = BoardData()
+        boardData = GameData()
         board = boardData
     }
     
