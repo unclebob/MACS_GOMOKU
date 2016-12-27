@@ -23,12 +23,17 @@ class GameData: Board, BoardState {
     }
     
     func takeTurn(_ column: Int, _ row: Int) -> BoardError? {
-        place(column, row, player)
+        let error = place(column, row, player)
         player = other(player)
+        return error
     }
 
     func other(_ player: Player) -> Player {
         return player == Player.white ? Player.black : Player.white
+    }
+    
+    func whoseTurn() -> Player {
+        return player
     }
     
     func place(_ column: Int, _ row: Int, _ player: Player) -> BoardError? {

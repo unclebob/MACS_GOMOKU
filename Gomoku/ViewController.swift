@@ -1,16 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var statusLabel: UILabel!
-    var game: Game!
-    var presenter: GamePresenter!
+    lazy var statusLabel: UILabel = {
+        return makeStatusLabel()
+    }()
+    lazy var game: Game = {
+        return Game()
+    }()
+    lazy var presenter: GamePresenter = {
+        return GamePresenter()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
-        
-        game = Game()
-        presenter = GamePresenter()
         
         let gridView = GridView(frame: CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: self.view.frame.size.width), board: game.getBoard())
         self.view.addSubview(gridView)
@@ -19,8 +22,7 @@ class ViewController: UIViewController {
             self.respondToTap(col, row: row)
         }
         
-        let labelWidth: CGFloat = 100.0
-        statusLabel = UILabel(frame: CGRect(x: (view.frame.width - labelWidth) / 2.0, y: 100,width: labelWidth, height: 25))
+        
         self.view.addSubview(statusLabel)
         
         statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
@@ -30,13 +32,19 @@ class ViewController: UIViewController {
 
     
     func respondToTap(_ col: Int, row: Int) {
+        let tappingPlayer = game.whoseTurn()
         game.takeTurn(col, row)
-        if game.getRules().isWin(game.getBoard(), game.whoseTurn()) {
-            statusLabel.text = presenter.getWinStatus(game.whoseTurn())
+        if game.getRules().isWin(game.getBoard(), tappingPlayer) {
+            statusLabel.text = presenter.getWinStatus(tappingPlayer)
         }
         else {
-            statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
+            statusLabel.text = presenter.getPlayerStatus(tappingPlayer)
         }
+    }
+    
+    func makeStatusLabel() -> UILabel {
+        
+        return UILabel(frame: CGRect(x: (view.frame.width - labelWidth) / 2.0, y: 100,width: labelWidth, height: 25))
     }
 }
 
