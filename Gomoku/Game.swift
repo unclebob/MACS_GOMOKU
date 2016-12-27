@@ -5,7 +5,7 @@ protocol BoardFactory {
 class Game {
     let board: Board
     let rules: GomokuRules
-    var player = Player.White
+    var player = Player.white
     static var boardFactory : BoardFactory!
 
     init() {
@@ -13,7 +13,7 @@ class Game {
         self.rules = GomokuRules()
     }
     
-    func takeTurn(col: Int, _ row: Int) {
+    func takeTurn(_ col: Int, _ row: Int) {
         board.place(col, row, whoseTurn())
         player = other(player)
     }
@@ -22,8 +22,8 @@ class Game {
         return player
     }
     
-    func other(player: Player) -> Player {
-        return player == Player.White ? Player.Black : Player.White
+    func other(_ player: Player) -> Player {
+        return player == Player.white ? Player.black : Player.white
     }
     
     func getBoard() -> BoardState {

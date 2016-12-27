@@ -1,12 +1,12 @@
 class GamePresenter {
-    var playerTurnNames = [Player.White: "White's Turn", Player.Black: "Black's Turn", Player.Empty: "TILT"]
-    var winStatusStrings = [Player.White: "White Wins!", Player.Black: "Black Wins!", Player.Empty: "TILT"]
+    var playerTurnNames = [Player.white: "White's Turn", Player.black: "Black's Turn", Player.empty: "TILT"]
+    var winStatusStrings = [Player.white: "White Wins!", Player.black: "Black Wins!", Player.empty: "TILT"]
     
-    func getPlayerStatus(player: Player) -> String {
+    func getPlayerStatus(_ player: Player) -> String {
         return playerTurnNames[player]!
     }
     
-    func getWinStatus(player: Player) -> String {
+    func getWinStatus(_ player: Player) -> String {
         return winStatusStrings[player]!
     }
 }

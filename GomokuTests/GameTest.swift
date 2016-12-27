@@ -10,7 +10,7 @@ class GameTest: XCTestCase {
     
     func testWhiteStartsNewGame() {
         let game = Game()
-        XCTAssertEqual(Player.White, game.whoseTurn())
+        XCTAssertEqual(Player.white, game.whoseTurn())
     }
     
     func testAfterATurn_isOtherPlayersTurn() {
@@ -18,13 +18,13 @@ class GameTest: XCTestCase {
         
         game.takeTurn(0,0)
         
-        XCTAssertEqual(Player.White, game.getBoard().get(0,0).0)
-        XCTAssertEqual(Player.Black, game.whoseTurn())
+        XCTAssertEqual(Player.white, game.getBoard().get(0,0).0)
+        XCTAssertEqual(Player.black, game.whoseTurn())
         
         game.takeTurn(1,0)
         
-        XCTAssertEqual(Player.Black, game.getBoard().get(1,0).0)
-        XCTAssertEqual(Player.White, game.whoseTurn())
+        XCTAssertEqual(Player.black, game.getBoard().get(1,0).0)
+        XCTAssertEqual(Player.white, game.whoseTurn())
     }
     
 }

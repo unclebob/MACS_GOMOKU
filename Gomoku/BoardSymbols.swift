@@ -1,9 +1,9 @@
 enum Player {
-    case White
-    case Black
-    case Empty
+    case white
+    case black
+    case empty
 }
 
 enum BoardError {
-    case SpaceOccupied, BadLocation
+    case spaceOccupied, badLocation
 }

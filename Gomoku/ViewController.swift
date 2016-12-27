@@ -7,12 +7,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.blue
         
         game = Game()
         presenter = GamePresenter()
         
-        let gridView = GridView(frame: CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.width), board: game.getBoard())
+        let gridView = GridView(frame: CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: self.view.frame.size.width), board: game.getBoard())
         self.view.addSubview(gridView)
         
         gridView.tapResponder = { (col, row) in
@@ -20,16 +20,16 @@ class ViewController: UIViewController {
         }
         
         let labelWidth: CGFloat = 100.0
-        statusLabel = UILabel(frame: CGRectMake((view.frame.width - labelWidth) / 2.0, 100,labelWidth, 25))
+        statusLabel = UILabel(frame: CGRect(x: (view.frame.width - labelWidth) / 2.0, y: 100,width: labelWidth, height: 25))
         self.view.addSubview(statusLabel)
         
         statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
-        statusLabel.textColor = UIColor.whiteColor()
-        statusLabel.textAlignment = NSTextAlignment.Center
+        statusLabel.textColor = UIColor.white
+        statusLabel.textAlignment = NSTextAlignment.center
     }
 
     
-    func respondToTap(col: Int, row: Int) {
+    func respondToTap(_ col: Int, row: Int) {
         game.takeTurn(col, row)
         if game.getRules().isWin(game.getBoard(), game.whoseTurn()) {
             statusLabel.text = presenter.getWinStatus(game.whoseTurn())
