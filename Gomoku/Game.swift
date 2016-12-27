@@ -1,9 +1,9 @@
 protocol BoardFactory {
-    func makeBoard() -> Board
+    func makeBoard() -> Board & BoardState
 }
 
 class Game {
-    let board: Board
+    let board: Board & BoardState
     let rules: GomokuRules
     static var boardFactory : BoardFactory!
 
@@ -20,8 +20,8 @@ class Game {
         return board.whoseTurn()
     }
     
-    func getBoard() -> BoardState {
-        return board as! BoardState
+    func getBoard() -> Board & BoardState {
+        return board
     }
     
     func getRules() -> GomokuRules {

@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     lazy var statusLabel: UILabel = {
-        return makeStatusLabel()
+        return self.makeStatusLabel()
     }()
     lazy var game: Game = {
         return Game()
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     func makeStatusLabel() -> UILabel {
-        
+        let labelWidth: CGFloat = 100.0
         return UILabel(frame: CGRect(x: (view.frame.width - labelWidth) / 2.0, y: 100,width: labelWidth, height: 25))
     }
 }

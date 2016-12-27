@@ -1,5 +1,5 @@
 class BoardFactoryImpl : BoardFactory {
-    func makeBoard() -> Board {
+    func makeBoard() -> Board & BoardState {
         return GameData()
     }
 }
