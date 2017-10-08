@@ -12,6 +12,7 @@ class Game {
         self.rules = GomokuRules()
     }
     
+    @discardableResult
     func takeTurn(_ col: Int, _ row: Int) -> BoardError? {
        return board.takeTurn(col, row)
     }
