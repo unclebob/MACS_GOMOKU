@@ -38,7 +38,8 @@ class ViewController: UIViewController {
             statusLabel.text = presenter.getWinStatus(tappingPlayer)
         }
         else {
-            statusLabel.text = presenter.getPlayerStatus(tappingPlayer)
+            let nextPlayer = game.whoseTurn()
+            statusLabel.text = presenter.getPlayerStatus(nextPlayer)
         }
     }
     
