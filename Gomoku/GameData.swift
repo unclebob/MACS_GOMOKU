@@ -36,6 +36,7 @@ class GameData: Board, BoardState {
         return player
     }
     
+    @discardableResult
     func place(_ column: Int, _ row: Int, _ player: Player) -> BoardError? {
         let (loc, error) = makeLocation(column, row)
         if (error != nil) {
