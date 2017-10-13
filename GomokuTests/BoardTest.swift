@@ -14,26 +14,26 @@ class BoardTest: XCTestCase {
     }
     
     func testNewBoardHasNoStones() {
-        let stones = boardData.stonesPlaced()
+        let stones = boardData.stonesPlacedCount
         XCTAssertEqual(0, stones)
     }
  
     func testCanAddStonesInBounds() {
         board.place(1,1, Player.white)
         
-        XCTAssertEqual(1, boardData.stonesPlaced())
-        XCTAssertEqual(Player.white, board.get(1,1).0)
+        XCTAssertEqual(1, boardData.stonesPlacedCount)
+        XCTAssertEqual(Player.white, board.get(1,1).value)
         
-        board.place(board.getWidth()-1,board.getHeight()-1,Player.black)
+        board.place(board.width-1,board.height-1,Player.black)
         
-        XCTAssertEqual(2, boardData.stonesPlaced())
-        XCTAssertEqual(Player.black, board.get(board.getWidth()-1,board.getHeight()-1).0 )
+        XCTAssertEqual(2, boardData.stonesPlacedCount)
+        XCTAssertEqual(Player.black, board.get(board.width-1,board.height-1).value )
     }
     
     func testKnowsAboutEmptyIntersections() {
-        XCTAssertEqual(Player.empty,  board.get(0,1).0)
+        XCTAssertEqual(Player.empty,  board.get(0,1).value)
         board.place(0,1,Player.white)
-        XCTAssertEqual(Player.white,  board.get(0,1).0)
+        XCTAssertEqual(Player.white,  board.get(0,1).value)
     }
     
     func testCannotAddToOccupiedIntersection() {
@@ -45,12 +45,12 @@ class BoardTest: XCTestCase {
     
     func testCannotPlaceStonesOutsideBounds() {
         XCTAssertEqual(board.place(-1, -1, Player.white), BoardError.badLocation)
-        XCTAssertEqual(board.place(board.getWidth(), board.getHeight(), Player.white), BoardError.badLocation)
+        XCTAssertEqual(board.place(board.width, board.height, Player.white), BoardError.badLocation)
         XCTAssertEqual(board.place(0, -1, Player.white), BoardError.badLocation)
-        XCTAssertEqual(board.place(0, board.getHeight(), Player.white), BoardError.badLocation)
+        XCTAssertEqual(board.place(0, board.height, Player.white), BoardError.badLocation)
         XCTAssertEqual(board.place(-1, 0, Player.white), BoardError.badLocation)
-        XCTAssertEqual(board.place(board.getWidth(), 0, Player.white), BoardError.badLocation)
+        XCTAssertEqual(board.place(board.width, 0, Player.white), BoardError.badLocation)
         
-        XCTAssertEqual(0, boardData.stonesPlaced())
+        XCTAssertEqual(0, boardData.stonesPlacedCount)
     }
 }

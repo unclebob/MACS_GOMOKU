@@ -18,12 +18,12 @@ class GameTest: XCTestCase {
         
         game.takeTurn(0,0)
         
-        XCTAssertEqual(Player.white, game.getBoard().get(0,0).0)
+        XCTAssertEqual(Player.white, game.getBoard().get(0,0).value)
         XCTAssertEqual(Player.black, game.whoseTurn())
         
         game.takeTurn(1,0)
         
-        XCTAssertEqual(Player.black, game.getBoard().get(1,0).0)
+        XCTAssertEqual(Player.black, game.getBoard().get(1,0).value)
         XCTAssertEqual(Player.white, game.whoseTurn())
     }
     

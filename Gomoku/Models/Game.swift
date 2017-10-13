@@ -3,28 +3,43 @@ protocol BoardFactory {
 }
 
 class Game {
+    
+    // MARK: -
+    // MARK: Static
+    
+    static var boardFactory : BoardFactory!
+    
+    // MARK: -
+    // MARK: Properties
+    
     let board: Board & BoardState
     let rules: GomokuRules
-    static var boardFactory : BoardFactory!
+    
+    // MARK: -
+    // MARK: Init and Deinit
 
     init() {
         self.board = Game.boardFactory.makeBoard()
         self.rules = GomokuRules()
     }
     
+    // MARK: -
+    // MARK: Public
+    
+    @discardableResult
     func takeTurn(_ col: Int, _ row: Int) -> BoardError? {
-       return board.takeTurn(col, row)
+       return self.board.takeTurn(col, row)
     }
     
     func whoseTurn() -> Player {
-        return board.whoseTurn()
+        return self.board.whoseTurn()
     }
     
     func getBoard() -> Board & BoardState {
-        return board
+        return self.board
     }
     
     func getRules() -> GomokuRules {
-        return rules
+        return self.rules
     }
 }

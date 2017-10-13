@@ -7,30 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7302B051F91002D0060F490 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302AFB1F91002D0060F490 /* Board.swift */; };
+		D7302B061F91002D0060F490 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302AFC1F91002D0060F490 /* BoardState.swift */; };
+		D7302B071F91002D0060F490 /* BoardSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302AFD1F91002D0060F490 /* BoardSymbols.swift */; };
+		D7302B081F91002D0060F490 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302AFE1F91002D0060F490 /* Game.swift */; };
+		D7302B091F91002D0060F490 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302AFF1F91002D0060F490 /* GameData.swift */; };
+		D7302B0A1F91002D0060F490 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B001F91002D0060F490 /* GamePresenter.swift */; };
+		D7302B0B1F91002D0060F490 /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B011F91002D0060F490 /* GomokuRules.swift */; };
+		D7302B0C1F91002D0060F490 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B031F91002D0060F490 /* GridView.swift */; };
+		D7302B0D1F91002D0060F490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B041F91002D0060F490 /* ViewController.swift */; };
+		D7302B121F9107D10060F490 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B111F9107D10060F490 /* Tuple.swift */; };
+		D7302B131F910DE80060F490 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FB1CBC158C004A30D9 /* BoardTest.swift */; };
+		D7302B1D1F9114710060F490 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B1C1F9114710060F490 /* Result.swift */; };
+		D7302B1F1F9115360060F490 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B1E1F9115360060F490 /* Operators.swift */; };
+		D7302B201F9115D40060F490 /* GomokuRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */; };
+		D7302B211F9115D80060F490 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B761D18817600AC4FBD /* GameTest.swift */; };
+		D7302B221F9115DA0060F490 /* GamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B7E1D188AD900AC4FBD /* GamePresenterTest.swift */; };
+		D7302B241F9118CB0060F490 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B231F9118CB0060F490 /* Flow.swift */; };
+		D7302B261F911E9A0060F490 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B251F911E9A0060F490 /* Reducer.swift */; };
+		D7302B281F911F170060F490 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B271F911F170060F490 /* Array+Extensions.swift */; };
+		D7302B2A1F912F4A0060F490 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B291F912F4A0060F490 /* Line.swift */; };
+		D7302B2C1F912F980060F490 /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B2B1F912F980060F490 /* UIBezierPath+Extensions.swift */; };
+		D7302B2E1F91317C0060F490 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B2D1F91317C0060F490 /* CGRect+Extensions.swift */; };
+		D7302B301F9134190060F490 /* BoardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B2F1F9134190060F490 /* BoardPresenter.swift */; };
+		D7302B321F9136E40060F490 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B311F9136E40060F490 /* Circle.swift */; };
+		D7302B341F9140650060F490 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B331F9140650060F490 /* Optional+Extensions.swift */; };
+		D7302B361F91407C0060F490 /* Weakify.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B351F91407C0060F490 /* Weakify.swift */; };
+		D7302B381F9141E90060F490 /* BoardPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7302B371F9141E90060F490 /* BoardPresenterTest.swift */; };
 		F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214CB1CBC1536004A30D9 /* AppDelegate.swift */; };
-		F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214CD1CBC1536004A30D9 /* ViewController.swift */; };
 		F15214D11CBC1536004A30D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214CF1CBC1536004A30D9 /* Main.storyboard */; };
 		F15214D31CBC1536004A30D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15214D21CBC1536004A30D9 /* Assets.xcassets */; };
 		F15214D61CBC1536004A30D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */; };
-		F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FB1CBC158C004A30D9 /* BoardTest.swift */; };
-		F15214FE1CBC1594004A30D9 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* GameData.swift */; };
-		F17B0B741D1851AF00AC4FBD /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15214FD1CBC1594004A30D9 /* GameData.swift */; };
-		F17B0B751D1851AF00AC4FBD /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
-		F17B0B771D18817600AC4FBD /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B761D18817600AC4FBD /* GameTest.swift */; };
-		F17B0B791D18825C00AC4FBD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B781D18825C00AC4FBD /* Game.swift */; };
-		F17B0B7A1D18825C00AC4FBD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B781D18825C00AC4FBD /* Game.swift */; };
-		F17B0B7C1D18899000AC4FBD /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B7B1D18899000AC4FBD /* GamePresenter.swift */; };
-		F17B0B7D1D18899000AC4FBD /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B7B1D18899000AC4FBD /* GamePresenter.swift */; };
-		F17B0B7F1D188AD900AC4FBD /* GamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B0B7E1D188AD900AC4FBD /* GamePresenterTest.swift */; };
-		F17F98901D4BCFE400C72628 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F988F1D4BCFE400C72628 /* BoardState.swift */; };
-		F17F98911D4BCFE400C72628 /* BoardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F988F1D4BCFE400C72628 /* BoardState.swift */; };
-		F17F98931D4BD02000C72628 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98921D4BD02000C72628 /* Board.swift */; };
-		F17F98941D4BD02000C72628 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98921D4BD02000C72628 /* Board.swift */; };
-		F17F98961D4BDE8500C72628 /* BoardSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98951D4BDE8500C72628 /* BoardSymbols.swift */; };
-		F17F98971D4BDE8500C72628 /* BoardSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17F98951D4BDE8500C72628 /* BoardSymbols.swift */; };
-		F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */; };
-		F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */; };
-		F1D360641CDD2E1600B5663D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D360631CDD2E1600B5663D /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +58,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7302AFB1F91002D0060F490 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		D7302AFC1F91002D0060F490 /* BoardState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
+		D7302AFD1F91002D0060F490 /* BoardSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardSymbols.swift; sourceTree = "<group>"; };
+		D7302AFE1F91002D0060F490 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D7302AFF1F91002D0060F490 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		D7302B001F91002D0060F490 /* GamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		D7302B011F91002D0060F490 /* GomokuRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRules.swift; sourceTree = "<group>"; };
+		D7302B031F91002D0060F490 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		D7302B041F91002D0060F490 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7302B111F9107D10060F490 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		D7302B1C1F9114710060F490 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D7302B1E1F9115360060F490 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		D7302B231F9118CB0060F490 /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		D7302B251F911E9A0060F490 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		D7302B271F911F170060F490 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		D7302B291F912F4A0060F490 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		D7302B2B1F912F980060F490 /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
+		D7302B2D1F91317C0060F490 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		D7302B2F1F9134190060F490 /* BoardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardPresenter.swift; sourceTree = "<group>"; };
+		D7302B311F9136E40060F490 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		D7302B331F9140650060F490 /* Optional+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		D7302B351F91407C0060F490 /* Weakify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakify.swift; sourceTree = "<group>"; };
+		D7302B371F9141E90060F490 /* BoardPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardPresenterTest.swift; sourceTree = "<group>"; };
 		F15214C81CBC1536004A30D9 /* Gomoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15214CB1CBC1536004A30D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F15214CD1CBC1536004A30D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F15214D01CBC1536004A30D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F15214D21CBC1536004A30D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F15214D51CBC1536004A30D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,17 +92,9 @@
 		F15214E71CBC1536004A30D9 /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15214ED1CBC1536004A30D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15214FB1CBC158C004A30D9 /* BoardTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTest.swift; sourceTree = "<group>"; };
-		F15214FD1CBC1594004A30D9 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		F17B0B761D18817600AC4FBD /* GameTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
-		F17B0B781D18825C00AC4FBD /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		F17B0B7B1D18899000AC4FBD /* GamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		F17B0B7E1D188AD900AC4FBD /* GamePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePresenterTest.swift; sourceTree = "<group>"; };
-		F17F988F1D4BCFE400C72628 /* BoardState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardState.swift; sourceTree = "<group>"; };
-		F17F98921D4BD02000C72628 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		F17F98951D4BDE8500C72628 /* BoardSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardSymbols.swift; sourceTree = "<group>"; };
 		F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRulesTest.swift; sourceTree = "<group>"; };
-		F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomokuRules.swift; sourceTree = "<group>"; };
-		F1D360631CDD2E1600B5663D /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +122,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7302AF71F91002D0060F490 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D7302B0E1F91014D0060F490 /* Functions */,
+				D7302AF81F91002D0060F490 /* Extensions */,
+				D7302AF91F91002D0060F490 /* Types */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D7302AF81F91002D0060F490 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7302B271F911F170060F490 /* Array+Extensions.swift */,
+				D7302B2B1F912F980060F490 /* UIBezierPath+Extensions.swift */,
+				D7302B2D1F91317C0060F490 /* CGRect+Extensions.swift */,
+				D7302B331F9140650060F490 /* Optional+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7302AF91F91002D0060F490 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				D7302B1C1F9114710060F490 /* Result.swift */,
+				D7302B251F911E9A0060F490 /* Reducer.swift */,
+				D7302B291F912F4A0060F490 /* Line.swift */,
+				D7302B311F9136E40060F490 /* Circle.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		D7302AFA1F91002D0060F490 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7302AFB1F91002D0060F490 /* Board.swift */,
+				D7302AFC1F91002D0060F490 /* BoardState.swift */,
+				D7302AFD1F91002D0060F490 /* BoardSymbols.swift */,
+				D7302AFE1F91002D0060F490 /* Game.swift */,
+				D7302AFF1F91002D0060F490 /* GameData.swift */,
+				D7302B001F91002D0060F490 /* GamePresenter.swift */,
+				D7302B011F91002D0060F490 /* GomokuRules.swift */,
+				D7302B2F1F9134190060F490 /* BoardPresenter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7302B021F91002D0060F490 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D7302B031F91002D0060F490 /* GridView.swift */,
+				D7302B041F91002D0060F490 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D7302B0E1F91014D0060F490 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				D7302B111F9107D10060F490 /* Tuple.swift */,
+				D7302B1E1F9115360060F490 /* Operators.swift */,
+				D7302B231F9118CB0060F490 /* Flow.swift */,
+				D7302B351F91407C0060F490 /* Weakify.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		F15214BF1CBC1536004A30D9 = {
 			isa = PBXGroup;
 			children = (
@@ -124,20 +212,14 @@
 		F15214CA1CBC1536004A30D9 /* Gomoku */ = {
 			isa = PBXGroup;
 			children = (
-				F15214FD1CBC1594004A30D9 /* GameData.swift */,
+				D7302AF71F91002D0060F490 /* Library */,
+				D7302AFA1F91002D0060F490 /* Models */,
+				D7302B021F91002D0060F490 /* UI */,
 				F15214CB1CBC1536004A30D9 /* AppDelegate.swift */,
-				F15214CD1CBC1536004A30D9 /* ViewController.swift */,
 				F15214CF1CBC1536004A30D9 /* Main.storyboard */,
 				F15214D21CBC1536004A30D9 /* Assets.xcassets */,
 				F15214D41CBC1536004A30D9 /* LaunchScreen.storyboard */,
 				F15214D71CBC1536004A30D9 /* Info.plist */,
-				F1B2DFCE1CCFF4770099CA75 /* GomokuRules.swift */,
-				F1D360631CDD2E1600B5663D /* GridView.swift */,
-				F17B0B781D18825C00AC4FBD /* Game.swift */,
-				F17B0B7B1D18899000AC4FBD /* GamePresenter.swift */,
-				F17F988F1D4BCFE400C72628 /* BoardState.swift */,
-				F17F98921D4BD02000C72628 /* Board.swift */,
-				F17F98951D4BDE8500C72628 /* BoardSymbols.swift */,
 			);
 			path = Gomoku;
 			sourceTree = "<group>";
@@ -150,6 +232,7 @@
 				F1B2DFCC1CCFF3D70099CA75 /* GomokuRulesTest.swift */,
 				F17B0B761D18817600AC4FBD /* GameTest.swift */,
 				F17B0B7E1D188AD900AC4FBD /* GamePresenterTest.swift */,
+				D7302B371F9141E90060F490 /* BoardPresenterTest.swift */,
 			);
 			path = GomokuTests;
 			sourceTree = "<group>";
@@ -235,6 +318,7 @@
 					F15214DB1CBC1536004A30D9 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0820;
+						TestTargetID = F15214C71CBC1536004A30D9;
 					};
 					F15214E61CBC1536004A30D9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -295,16 +379,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F15214CE1CBC1536004A30D9 /* ViewController.swift in Sources */,
-				F17B0B791D18825C00AC4FBD /* Game.swift in Sources */,
-				F1B2DFCF1CCFF4770099CA75 /* GomokuRules.swift in Sources */,
+				D7302B0D1F91002D0060F490 /* ViewController.swift in Sources */,
+				D7302B061F91002D0060F490 /* BoardState.swift in Sources */,
+				D7302B2A1F912F4A0060F490 /* Line.swift in Sources */,
+				D7302B281F911F170060F490 /* Array+Extensions.swift in Sources */,
+				D7302B0B1F91002D0060F490 /* GomokuRules.swift in Sources */,
+				D7302B091F91002D0060F490 /* GameData.swift in Sources */,
+				D7302B2E1F91317C0060F490 /* CGRect+Extensions.swift in Sources */,
+				D7302B081F91002D0060F490 /* Game.swift in Sources */,
+				D7302B051F91002D0060F490 /* Board.swift in Sources */,
+				D7302B1D1F9114710060F490 /* Result.swift in Sources */,
+				D7302B2C1F912F980060F490 /* UIBezierPath+Extensions.swift in Sources */,
+				D7302B301F9134190060F490 /* BoardPresenter.swift in Sources */,
+				D7302B241F9118CB0060F490 /* Flow.swift in Sources */,
+				D7302B261F911E9A0060F490 /* Reducer.swift in Sources */,
+				D7302B321F9136E40060F490 /* Circle.swift in Sources */,
+				D7302B121F9107D10060F490 /* Tuple.swift in Sources */,
+				D7302B0A1F91002D0060F490 /* GamePresenter.swift in Sources */,
+				D7302B1F1F9115360060F490 /* Operators.swift in Sources */,
+				D7302B071F91002D0060F490 /* BoardSymbols.swift in Sources */,
+				D7302B361F91407C0060F490 /* Weakify.swift in Sources */,
+				D7302B341F9140650060F490 /* Optional+Extensions.swift in Sources */,
+				D7302B0C1F91002D0060F490 /* GridView.swift in Sources */,
 				F15214CC1CBC1536004A30D9 /* AppDelegate.swift in Sources */,
-				F17F98901D4BCFE400C72628 /* BoardState.swift in Sources */,
-				F17B0B7C1D18899000AC4FBD /* GamePresenter.swift in Sources */,
-				F1D360641CDD2E1600B5663D /* GridView.swift in Sources */,
-				F15214FE1CBC1594004A30D9 /* GameData.swift in Sources */,
-				F17F98961D4BDE8500C72628 /* BoardSymbols.swift in Sources */,
-				F17F98931D4BD02000C72628 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,17 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F17B0B741D1851AF00AC4FBD /* GameData.swift in Sources */,
-				F17B0B7A1D18825C00AC4FBD /* Game.swift in Sources */,
-				F17F98941D4BD02000C72628 /* Board.swift in Sources */,
-				F17B0B751D1851AF00AC4FBD /* GomokuRules.swift in Sources */,
-				F17F98911D4BCFE400C72628 /* BoardState.swift in Sources */,
-				F17B0B771D18817600AC4FBD /* GameTest.swift in Sources */,
-				F17B0B7F1D188AD900AC4FBD /* GamePresenterTest.swift in Sources */,
-				F17B0B7D1D18899000AC4FBD /* GamePresenter.swift in Sources */,
-				F17F98971D4BDE8500C72628 /* BoardSymbols.swift in Sources */,
-				F15214FC1CBC158C004A30D9 /* BoardTest.swift in Sources */,
-				F1B2DFCD1CCFF3D70099CA75 /* GomokuRulesTest.swift in Sources */,
+				D7302B221F9115DA0060F490 /* GamePresenterTest.swift in Sources */,
+				D7302B381F9141E90060F490 /* BoardPresenterTest.swift in Sources */,
+				D7302B131F910DE80060F490 /* BoardTest.swift in Sources */,
+				D7302B201F9115D40060F490 /* GomokuRulesTest.swift in Sources */,
+				D7302B211F9115D80060F490 /* GameTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,6 +571,7 @@
 		F15214F41CBC1536004A30D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,18 +579,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
 			};
 			name = Debug;
 		};
 		F15214F51CBC1536004A30D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GomokuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cleancoders.GomokuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomoku.app/Gomoku";
 			};
 			name = Release;
 		};

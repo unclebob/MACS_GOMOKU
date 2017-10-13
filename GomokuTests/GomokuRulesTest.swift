@@ -56,7 +56,7 @@ class GomokuRulesTest: XCTestCase {
     }
     
     func testFiveConsecutiveInAnyRow_isAWin() {
-        for row in 0..<board.getHeight() {
+        for row in 0..<board.height {
             board = Game.boardFactory.makeBoard()
             boardState = board as! BoardState
             for col in 0..<5 {
