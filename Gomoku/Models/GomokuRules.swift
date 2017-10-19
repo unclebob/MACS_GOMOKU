@@ -25,28 +25,26 @@ class GomokuRules {
     // MARK: Private
     
     private func isRowWin(_ board: BoardState, _ player: Player) -> Bool {
-        return self.isConsecutive(player, board.height, board.width) {
-            board.get($1, $0)
-        }
+        return self.isConsecutive(board, player, board.height, board.width, transformIndex: reverse)
     }
     
     private func isColWin(_ board: BoardState, _ player: Player) -> Bool {
-        return self.isConsecutive(player, board.width, board.height) {
-            board.get($0, $1)
-        }
+        return self.isConsecutive(board, player, board.width, board.height, transformIndex: identity)
     }
     
     private func isConsecutive(
+        _ board: BoardState,
         _ player: Player,
         _ iMax: Int,
         _ jMax: Int,
-        getStone: (Int, Int) -> Result<Player, BoardError>
+        transformIndex: @escaping ((Int, Int)) -> (Int, Int)
     )
         -> Bool
     {
         return intersperse(0..<iMax, 0..<jMax)
-            .flatMap(getStone)
-            .map { $0.value == player }
+            .map(
+                transformIndex • board.get • { $0.value == player }
+            )
             .split { !$0 }
             .map { $0.count >= self.winLength }
             .filter { $0 }

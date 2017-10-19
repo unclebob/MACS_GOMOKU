@@ -19,3 +19,7 @@ func + <A, B, C>(lhs: (A, B), rhs: C) -> (A, B, C) {
 func + <A, B, C>(lhs: A, rhs: (B, C)) -> (A, B, C) {
     return (lhs, rhs.0, rhs.1)
 }
+
+func reverse<A, B>(_ value: (A, B)) -> (B, A) {
+    return (value.1, value.0)
+}
