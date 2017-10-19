@@ -1,27 +1,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    lazy var statusLabel: UILabel = {
-        return self.makeStatusLabel()
-    }()
-    lazy var game: Game = {
-        return Game()
-    }()
-    lazy var presenter: GamePresenter = {
-        return GamePresenter()
-    }()
+    lazy var statusLabel: UILabel = self.makeStatusLabel()
+    lazy var game = Game()
+    lazy var presenter = GamePresenter()
+    lazy var boardPresenter = BoardPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
         
-        let gridView = GridView(frame: CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: self.view.frame.size.width), board: game.getBoard())
+        let gridView = GridView(
+            frame: CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: self.view.frame.size.width),
+            board: game.getBoard(),
+            presenter: self.boardPresenter
+        )
+        
         self.view.addSubview(gridView)
         
-        gridView.tapResponder = { (col, row) in
-            self.respondToTap(col, row: row)
-        }
-        
+        gridView.tapResponder = weakify(ViewController.respondToTap, object: self)
         
         self.view.addSubview(statusLabel)
         
@@ -44,6 +41,7 @@ class ViewController: UIViewController {
     
     func makeStatusLabel() -> UILabel {
         let labelWidth: CGFloat = 100.0
+        
         return UILabel(frame: CGRect(x: (view.frame.width - labelWidth) / 2.0, y: 100,width: labelWidth, height: 25))
     }
 }
