@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     func respondToTap(_ col: Int, row: Int) {
         let tappingPlayer = game.whoseTurn()
-        game.takeTurn(col, row)
+        _ = game.takeTurn(col, row)
         if game.getRules().isWin(game.getBoard(), tappingPlayer) {
             statusLabel.text = presenter.getWinStatus(tappingPlayer)
         }
