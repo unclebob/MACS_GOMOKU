@@ -19,7 +19,7 @@ class GridView: UIView {
         self.cellSize = boardSize / CGFloat(cellCount)
         super.init(frame: frame)
         self.addGestureRecognizer(self.tapper)
-        self.backgroundColor = UIColor(colorLiteralRed: 255/255.0, green: 226/255.0, blue: 154/255.0, alpha: 1)
+        self.backgroundColor = UIColor(red: 255/255.0, green: 226/255.0, blue: 154/255.0, alpha: 1)
     }
     
     func setResponder(_ responder: @escaping TapResponder) {
@@ -30,7 +30,7 @@ class GridView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func tapped(_ tapper: UITapGestureRecognizer) {
+    @objc func tapped(_ tapper: UITapGestureRecognizer) {
         let locationOfTap = tapper.location(ofTouch: 0, in: self)
         
         let tappedColumn = Int((locationOfTap.x - cellSize) / cellSize + 0.5)
@@ -71,7 +71,7 @@ class GridView: UIView {
                     let stoneRadius = cellSize / 2.5
                     
                     stonePath.move(to: center)
-                    stonePath.addArc(withCenter: center, radius: stoneRadius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+                    stonePath.addArc(withCenter: center, radius: stoneRadius, startAngle: 0, endAngle: .pi * 2, clockwise: true)
                     stonePath.fill()
                 }
             }
