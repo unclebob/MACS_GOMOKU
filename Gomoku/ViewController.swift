@@ -22,7 +22,6 @@ class ViewController: UIViewController {
             self.respondToTap(col, row: row)
         }
         
-        
         self.view.addSubview(statusLabel)
         
         statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
@@ -36,9 +35,8 @@ class ViewController: UIViewController {
         _ = game.takeTurn(col, row)
         if game.getRules().isWin(game.getBoard(), tappingPlayer) {
             statusLabel.text = presenter.getWinStatus(tappingPlayer)
-        }
-        else {
-            statusLabel.text = presenter.getPlayerStatus(tappingPlayer)
+        } else {
+            statusLabel.text = presenter.getPlayerStatus(game.whoseTurn())
         }
     }
     
